@@ -1,0 +1,15 @@
+.site-main header.block {
+    position: relative;
+    overflow: hidden;
+}
+
+.site-main header.block .background-parallax {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+}
+
+.site-main header.block .content {
+    position: relative;
+    color: var(--wp--preset--color--base);
+}

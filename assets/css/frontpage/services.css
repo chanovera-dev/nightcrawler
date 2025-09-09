@@ -1,0 +1,96 @@
+#services {
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.services .container {
+    width: 100svw;
+    overflow: hidden;
+}
+
+#services.block .content {
+    overflow-x: hidden;
+    padding: 60px 0;
+    position: relative;
+}
+
+#services .title-section { 
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--wp--preset--color--blue);
+    text-align: center;
+    padding: 0 20px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+#services .title-section:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #f9bf34;
+    content: '';
+}
+
+#services .slideshow-wrapper {
+    z-index: 1;
+    overflow: hidden;
+    width: 100svw;
+    padding-bottom: 80px;
+    margin-inline: auto;
+}
+
+#services .slideshow-wrapper .slideshow {
+    display: flex;
+}
+
+#services .slideshow-buttons-wrapper{position:absolute; bottom:20px; transform:translateX(-50%); left:50%;z-index: 2;}
+#services .slideshow-buttons-wrapper .slideshow-buttons{padding:4px; background-color:transparent; display:flex; gap:20px; margin:0; list-style:none; border-radius:9px;}
+#services .slideshow-buttons .slideshow-button{width:10px; height:10px; border-radius:50%; background-color:var(--wp--preset--color--bullet);cursor:pointer;}
+#services .slideshow-buttons .slideshow-button.active{background-color: #FAC033;}
+
+@media (max-width: 578px) {
+    #services .slideshow-buttons-wrapper {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #services .slideshow-wrapper {
+        width: 50svw;
+        overflow: visible;
+        padding: 120px 0 150px;
+    }
+
+    #services .slideshow-wrapper .slideshow .service-picture {
+        opacity: .5;
+        transition: all .3s ease-in-out;
+    }
+
+    #services .slideshow-wrapper .slideshow .service-picture.active {
+        opacity: 1;
+        transform: scale(1.25);
+        filter: contrast(1);
+        z-index: 2;
+        box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.25);
+    }
+}
+
+@media (min-width: 1024px) {
+    #services .slideshow-wrapper {
+        width: 30svw;
+        padding: 50px 0 150px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #services .slideshow-wrapper {
+        width: 20svw;
+    }
+}

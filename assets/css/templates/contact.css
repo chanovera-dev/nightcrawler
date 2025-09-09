@@ -1,0 +1,165 @@
+.site-main main.block .content {
+    padding-bottom: 60px;
+}
+
+/*****************************************************************
+*   H E A D I N G
+*****************************************************************/
+.site-main header.block {
+    background-color: #f6f6f6;
+}
+
+.site-main header.block .content {
+    padding: 140px 0;
+    color: var(--wp--preset--color--blue);
+}
+
+.site-main header.block .content .main-title {
+    position: relative;
+    font-size: 36px;
+    padding-bottom: 10px;
+    margin-bottom: 35px;
+}
+
+.site-main header.block .content .main-title:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 114px;
+    height: 2px;
+    background-color: var(--wp--preset--color--yellow);
+}
+
+.site-main header.block .content .subtitle {
+    font-size: 36px;
+    line-height: 110%;
+    font-weight: 100;
+    height: 50.55px;
+}
+
+/*****************************************************************
+*   F O R M
+*****************************************************************/
+
+.site-main .block .content textarea {
+    height: 100px;
+}
+
+.site-main .block .content input:not([type=submit]):not([type=file]):not([type=checkbox]):not([type=radio]):is(:hover,:focus),
+.site-main .block .content textarea:is(:hover,:focus) {
+    border-bottom-color: var(--wp--preset--color--yellow);
+}
+
+.site-main .block .content input:not([type=submit]):not([type=file]):not([type=checkbox]):not([type=radio])::placeholder,
+.site-main .block .content textarea::placeholder {
+    font-size: var(--wp--preset--font-size--small);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.site-main .block .content input[type="submit"].wpcf7-submit {
+    border:2px solid var(--wp--preset--color--blue);
+    background: var(--wp--preset--color--blue);
+    color: var(--wp--preset--color--base);
+    font-size: var(--wp--preset--font-size--small);
+    font-family: var(--wp--preset--font-family--libre-franklin);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    height: 39.75px;
+    padding: 7px 20px;
+    line-height: 1;
+    font-weight: 400;
+    border-radius: 2px;
+    transition: all .3s ease-in-out;
+}
+
+.site-main .block .content input[type="submit"].wpcf7-submit:hover {
+    background: var(--wp--preset--color--base);
+    color: var(--wp--preset--color--blue);
+}
+
+/*****************************************************************
+*   I N F O
+*****************************************************************/
+
+.site-main .block .content .info .title-section {
+    color: var(--wp--preset--color--blue);
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    position:relative;
+}
+
+.site-main .block .content .info .title-section::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--wp--preset--color--yellow);
+}
+
+.site-main .block .content .info .address {
+    color: var(--wp--preset--color--blue);
+    font-size: var(--wp--preset--font-size--small);
+    margin-bottom: 40px;
+}
+
+.site-main .block .content .info .emails {
+    color: var(--wp--preset--color--blue);
+    font-size: var(--wp--preset--font-size--small);
+    display: grid;
+    gap: 30px;
+}
+
+.site-main .block .content .info .emails .contact-name {
+    font-size: 20px;
+}
+
+.site-main .block .content .info .emails a {
+    color: var(--wp--preset--color--yellow);
+    transition: text-decoration .3s ease-in-out;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.site-main .block .content .info .emails a:hover {
+    text-decoration: underline;
+}
+
+/*****************************************************************
+*   R E S P O N S I V E
+*****************************************************************/
+
+@media (orientation: portrait) {
+    .wpcf7-form {
+        padding-bottom: 60px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wpcf7-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .wpcf7-form p:has(:is(textarea,.wpcf7-form-control-wrap[data-name="your-city"],input[type="submit"])) {
+        grid-column: 1 / -1;
+    }
+
+    .site-main .block .content .info .emails {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .site-main main.block .content {
+        display: grid; grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}

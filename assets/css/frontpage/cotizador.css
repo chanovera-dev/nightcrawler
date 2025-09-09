@@ -1,0 +1,113 @@
+.site-main {
+    & #cotizador.block {
+        background-color: var(--wp--preset--color--blue);
+        padding: 80px 0;
+
+        & .content {
+            & .container {
+                & .title-section {
+                    font-size: 20px;
+                    font-weight: 500;
+                    text-align: center;
+                    margin-bottom: 50px;
+                    color: var(--wp--preset--color--base);
+                    max-height: 300px;
+                    overflow: hidden;
+                    transition: max-height .3s ease-in-out, margin-bottom .3s ease-in-out;
+
+                    &.hide {
+                        margin-bottom: 0;
+                        max-height: 0;
+                    }
+                }
+            }
+
+            & form.container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                overflow: hidden;
+                align-items: end;
+                justify-content: center;
+                transition: max-height .3s ease-in-out;
+
+                & .custom-form {
+                    display: grid;
+
+                    & label {
+                        grid-column: 1 / -1;
+                        margin-bottom: 5px;
+                        font-size: var(--wp--preset--font-size--small);
+                        color: var(--wp--preset--color--base);
+                    }
+
+                    & input[type="number"] {
+                        font-size: var(--wp--preset--font-size--small);
+                        border-bottom: none;
+                        border-radius: 3px;
+                        -moz-appearance: textfield;
+                        appearance: textfield;
+
+                        &::placeholder {
+                            font-size: var(--wp--preset--font-size--small);
+                        }
+
+                    }
+
+                    & select {
+                        border-bottom: none;
+                        border-radius: 3px;
+                    }
+
+                    &.size {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+
+                    &.cp {
+                        width: 120px;
+                    }
+
+                    &.weight,
+                    &.size {
+                        input[type="number"] {
+                            width: 70px;
+                        }
+                    }
+
+                    &.size {
+                        & input[type="number"]:nth-child(2) {
+                            border-radius: 3px 0 0 3px;
+                        }
+
+                        & input[type="number"]:nth-child(3) {
+                            border-radius: 0;
+                            border-left: 1px solid #ebebeb;
+                            border-right: 1px solid #ebebeb;
+                        }
+
+                        & input[type="number"]:nth-child(4) {
+                            border: none;
+                            border-radius: 0 3px 3px 0;
+                        }
+                    }
+                }
+            }
+
+            & #nueva-cotizacion-wrap {
+                text-align: center;
+                color: var(--wp--preset--color--base);
+                display: grid;
+                gap: 20px;
+                overflow: hidden;
+                /* transition: max-height .3s ease-in-out; */
+
+                & #nueva-cotizacion {
+                    margin-inline: auto;
+                } 
+            }
+        }
+    }
+}
+
+
+

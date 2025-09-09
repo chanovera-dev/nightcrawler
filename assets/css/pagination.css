@@ -1,0 +1,44 @@
+/* pagination */
+.site-main .block .posts.content .navigation.pagination {
+    grid-column: 1 / -1;
+    margin-inline: auto;
+}
+
+.site-main .block .posts.content .navigation.pagination .screen-reader-text {
+    display: none;
+}
+
+.site-main .block .posts.content .navigation.pagination .nav-links {
+    display: flex;
+    align-items:center;
+}
+
+.site-main .block .posts.content .navigation.pagination .nav-links .page-numbers {
+    font-weight: 500;
+    border-radius: 0;
+    border: none;
+    line-height: 1;
+    margin: 0 2px;
+    display: grid;
+    place-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: var(--wp--preset--color--blue);
+    fill: var(--wp--preset--color--blue);
+    transition: all .3s ease-in-out;
+}
+
+.site-main .block .posts.content .navigation.pagination .nav-links .page-numbers.current {
+    background: var(--wp--preset--color--blue);
+    color: var(--wp--preset--color--base);
+}
+
+.site-main .block .posts.content .navigation.pagination .nav-links .page-numbers:hover:not(.current) {
+    background: var(--wp--preset--color--yellow);
+    color: var(--wp--preset--color--blue);
+}
+
+.site-main .block .posts.content .navigation.pagination .nav-links :is(.page-numbers.prev,.page-numbers.next) {
+    font-size: 0;
+}

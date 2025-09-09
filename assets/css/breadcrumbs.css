@@ -1,0 +1,27 @@
+.breadcrumbs.share {
+    margin: 40px 0;
+    border-bottom: 1px solid #dedede;
+    padding: 5px 0;
+    font-size: var(--wp--preset--font-size--medium);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        color: var(--wp--preset--color--blue);
+        fill: var(--wp--preset--color--blue);
+
+        & a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        & span {
+            color: #fac233;
+        }
+    }
+}

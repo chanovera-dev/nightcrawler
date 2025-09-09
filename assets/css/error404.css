@@ -1,0 +1,63 @@
+.site-main .block {
+    background-color: var(--wp--preset--color--base);
+}
+
+.site-main .block .content p {
+    margin: 20px 0;
+    padding-top: .50em;
+    padding-bottom: .50em;
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 150%;
+    color: var(--wp--preset--color--blue);
+}
+
+.site-main .block .content .btn {
+    text-transform: uppercase;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    height: 53px;
+    padding: 6px 40px;
+    border-radius: 3px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: "Libre Franklin";
+    color: var(--wp--preset--color--base);
+    background-color: var(--wp--preset--color--blue);
+    border: 2px solid var(--wp--preset--color--blue);
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.site-main .block .content .btn:hover {
+    color: var(--wp--preset--color--blue);
+    background-color: var(--wp--preset--color--base);
+}
+
+.site-main {
+    & header.block {
+        .content {
+            padding-top: 50px;
+        }
+    }
+    & section.block {
+        & .content {
+            padding-bottom: 50px;
+        }
+    }
+
+    & .block {
+        .content {
+            text-align: center;
+
+            & .error404-picture {
+                width: 100%;
+                max-width: 940px;
+                margin-inline: auto;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+            }
+        }
+    }
+} 

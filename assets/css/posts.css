@@ -1,0 +1,68 @@
+.site-main .block .content {
+    width: min(100% - 40px, 1140px);
+}
+
+.site-main .block header.content {
+    padding: 66px 0;
+    font-weight: 700;
+}
+
+.site-main .block header.content .before-title {
+    color: var(--wp--preset--color--yellow);
+    text-transform: uppercase;
+}
+
+.site-main .block header.content .main-title {
+    font-size: 36px;
+    color: var(--wp--preset--color--blue);
+    line-height: 1.3;
+    margin-top: 6px;
+    max-width: 912px;
+}
+
+.site-main .block .posts.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding-bottom: 66px;
+}
+
+/* post */
+.site-main .block .posts.content .archive-post {
+    position: relative;
+}
+
+.site-main .block .posts.content .archive-post .archive-post--header {
+    aspect-ratio: 16 / 9;
+    background-color: #e6e6e6;
+}
+
+.site-main .block .posts.content .archive-post .archive-post--header .thumbnail {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+.site-main .block .posts.content .archive-post .archive-post--content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #352c667e;
+    padding: 20px;
+    transition: background-color .3s ease-in-out;
+}
+
+.site-main .block .posts.content .archive-post:hover .archive-post--content {
+    background-color: var(--wp--preset--color--blue);
+}
+
+.site-main .block .posts.content .archive-post .archive-post--content .archive-post--permalink {
+    color: var(--wp--preset--color--base);
+}
+
+.site-main .block .posts.content .archive-post .archive-post--content .archive-post--permalink .archive-post--title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+}

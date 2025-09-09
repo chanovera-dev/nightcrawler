@@ -1,0 +1,19 @@
+.site-main .block .content {
+    width: min(100% - 40px, 1140px);
+}
+
+.site-main .block header.content .main-title {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 1.3em;
+    max-width: 700px;
+    color:var(--wp--preset--color--blue);
+    padding: 30px 0;
+}
+
+.site-main .block main.content {
+    color:var(--wp--preset--color--blue);
+    padding-bottom: 60px;
+    display: grid;
+    gap: 50px;
+}

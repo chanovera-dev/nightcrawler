@@ -1,0 +1,269 @@
+.site-main {
+    overflow: hidden;
+}
+
+/*****************************************************************
+*   H E A D I N G
+*****************************************************************/
+
+.site-main header.block {
+    background-color: var(--wp--preset--color--base);
+}
+
+.site-main header.block .content {
+    padding: 60px 0;
+    color: var(--wp--preset--color--blue);
+}
+
+.site-main header.block .content .main-title {
+    position: relative;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--wp--preset--color--yellow);
+}
+
+.site-main header.block .content .subtitle {
+    font-size: 50px;
+    font-weight: 700;
+    max-width: 691px;
+}
+
+/*****************************************************************
+*   S E R V I C E S
+*****************************************************************/
+
+.block.services:has(.content .slideshow-wrapper) {
+    color: var(--wp--preset--color--base);
+    position: relative;
+    overflow: hidden;
+}
+
+.block.services:has(.content .slideshow-wrapper) .content {
+    width: 100%;
+}
+
+.block.services:has(.content .slideshow-wrapper) .backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-color: #1d183be6;
+}
+
+/* slideshow */
+.block.services .content .container .slideshow-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.block.services .content .container .slideshow {
+    height: 100%;
+    display: flex;
+}
+
+.block.services .content .container .slideshow .service {
+    position: relative;
+    height: 100%;
+}
+
+.block.services .content .container .slideshow .service .service-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+} 
+
+.block.services .content .container .slideshow .service .service__content {
+    padding: 120px 0;
+    width: min(100% - 40px, 1440px);
+    margin-inline: auto;
+    position: inherit;
+}
+
+.block.services .content .container .slideshow .service .service-title {
+    position: relative;
+    font-size: 40px;
+    font-weight: 800;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.block.services .content .container .slideshow .service .service-title:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 114px;
+    height: 2px;
+    background-color: var(--wp--preset--color--yellow);
+}
+
+.block.services .content .container .slideshow .service .service-content {
+    max-width: 637px;
+}
+
+.block.services .content .container .slideshow .service .service-link {
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--wp--preset--color--yellow);
+    fill: var(--wp--preset--color--yellow);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: gap .3s ease-in-out;
+}
+
+.block.services .content .container .slideshow .service .service-link:hover {
+    gap: 14px;
+}
+
+:is(.slideshow-prev,.slideshow-next) {
+    position: absolute;
+    bottom: -32px;
+    transform: translateY(-50%);
+    display: grid;
+    place-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: var(--wp--preset--color--blue);
+    border: none;
+    transition: background-color .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+:is(.slideshow-prev,.slideshow-next):hover {
+    cursor: pointer;
+    background-color: #0000007b;
+}
+
+:is(.slideshow-prev,.slideshow-next) svg {
+    fill: var(--wp--preset--color--base);
+    width: 24px;
+    height: 24px;
+    transition: all .3s ease-in-out;
+}
+
+:is(.slideshow-prev,.slideshow-next):hover svg {
+    width: 32px;
+    height: 32px;
+}
+
+.slideshow-prev {
+    left: 0;
+}
+
+.slideshow-next {
+    right: 0;
+}
+
+.slideshow-wrapper .slideshow-buttons-wrapper {
+    position: absolute; 
+    bottom: 20px; 
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 2;
+}
+.slideshow-wrapper .slideshow-buttons-wrapper .slideshow-buttons{padding:4px; background-color:transparent; display:flex; gap:20px; margin:0; list-style:none; border-radius:9px;}
+.slideshow-wrapper .slideshow-buttons .slideshow-button{width:12px; height:12px; border-radius:50%; background-color: transparent;border:2px solid var(--wp--preset--color--base);cursor:pointer;}
+.slideshow-wrapper .slideshow-buttons .slideshow-button.active{background-color: var(--wp--preset--color--base);}
+
+/* solutions */
+
+.block:has(.content .title-section.solutions) .content:has(.title-section.solutions) {
+    padding: 120px 0;
+}
+
+.title-section.solutions {
+    background-size: cover;
+    background-position: top;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 5vw;
+    line-height: 5vw;
+    font-weight: 800;
+    text-align: center;
+    max-width: 1024px;
+    opacity: .7;
+    padding-bottom: 5px;
+}
+
+.block .content.large-width.solutions {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    padding-bottom: 60px;
+}
+
+.solution {
+    background-color: var(--wp--preset--color--blue);
+    padding: 10px 30px 30px 30px;
+    border-radius: 4px;
+    color: var(--wp--preset--color--base);
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    transition: transform .3s ease-in-out;
+}
+
+.solution:hover {
+    transform: translateY(-30px);
+}
+
+.solution__category {
+    font-size: 11px;
+}
+
+.solution__title {
+    font-size: 27px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+
+.solution__text {
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0;
+    text-transform: none;
+    padding-top: .50em;
+    padding-bottom: .50em;
+}
+
+.solution__link {
+    align-self: end;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    font-size: 11px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    border-radius: 3px;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+@media (min-width: 1476px) {
+    .block:has(.content .slideshow-wrapper) .container {
+        position: relative;
+    }
+
+    .block.services :is(.slideshow-prev,.slideshow-next) {
+        background-color: transparent;
+        left: 0;
+        bottom: 30%;
+        transform: translateY(-50%);
+        border: 1px solid var(--wp--preset--color--base);
+    }
+
+    .block.services .slideshow-next {
+        right: unset;
+        left: 63px;
+    }
+
+    .block.services .slideshow-wrapper .slideshow-buttons-wrapper {
+        width: min(100% - 40px, 1440px);
+    }
+}

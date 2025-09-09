@@ -1,0 +1,258 @@
+/* =====================================================
+   Base Styles
+====================================================== */
+#hero {
+    background-color: var(--wp--preset--color--secondary);
+}
+
+#hero .content {
+    position: relative;
+    width: min(100% - 40px, 1200px);
+    padding: 20px 0;
+}
+
+#hero:hover .services-cards .card-btns.lines,
+#hero:hover .card-nav {
+    opacity: 1;
+}
+
+/* =====================================================
+   Tabs Container
+====================================================== */
+.services-cards {
+    padding-top: 120px;
+    width: 100%;
+    display: grid;
+    overflow: hidden;
+}
+
+.tabs {
+    transition: all ease-out 0.3s;
+}
+
+.tabs input[name="tab-control"] {
+    display: none;
+}
+
+/* =====================================================
+   Card Content
+====================================================== */
+.tabs .card-content--container {
+    display: grid;
+    align-items: center;
+    transition: all ease-out 0.3s;
+}
+
+.tabs .card-content--container > div {
+    display: none;
+}
+
+.tabs .card-content--container > div .picture {
+    width: var(--width--img--hero--slideshow);
+    max-width: var(--max-width--img--hero--slideshow);
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    margin-inline: auto;
+    animation: img--hero--slideshow 0.3s ease-in-out forwards;
+    transition: all 0.3s ease-out;
+}
+
+.tabs .card-content--container > div .slide-title__wrapper {
+    position: absolute;
+    top: 44px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tabs .card-content--container > div .slide-title__wrapper .slide-title {
+    position: relative;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    color: #342b64;
+    opacity: 0;
+    mix-blend-mode: multiply;
+    animation: title--hero--slideshow 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+    z-index: 0;
+}
+
+.tabs .card-content--container > div .slide-title__wrapper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #342b64;
+    z-index: 1;
+    animation: title--hero--slideshow--backdrop 0.6s ease-in-out forwards;
+}
+
+
+/* =====================================================
+   Buttons
+====================================================== */
+.scroll-icon {
+    position: relative;
+    width: 22px;
+    height: 40px;
+    border: 2px solid rgba(51, 51, 51, 0.2);
+    border-radius: 23px;
+    margin-inline: auto;;
+}
+
+.scroll-icon:before {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    left: 50%;
+    animation: rev-ani-mouse 2.5s linear infinite;
+}
+
+@keyframes rev-ani-mouse {
+	0% {opacity: 1;top: 29%;}
+	15% {opacity: 1;top: 50%;}
+	50% {opacity: 0;top: 50%;}
+	100% {opacity: 0;top: 29%;}
+}
+
+.tabs .card-btns {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: var(--display--card-button--hero--slideshow);
+    justify-content: center;
+    gap: 50px;
+}
+
+.tabs .card-btns li {
+    border: 2px solid transparent;
+    border-radius: 21px;
+}
+
+.tabs .card-btns li label {
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    color: #342b64;
+    padding: 5px 20px;
+    margin-bottom: 0;
+    transition: all ease-out 0.3s;
+}
+
+/* Line Style Buttons */
+.tabs .card-btns.lines {
+    display: flex;
+    gap: 6px;
+    padding: 20px 0 30px;
+    opacity: var(--opacity--card-btns--slideshow);
+    transition: opacity .3s ease-in-out;
+}
+
+.tabs .card-btns.lines li {
+    width: 60px;
+    height: 3px;
+    background-color: #e8e8e8;
+    font-size: 0;
+    border: none !important;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.tabs .card-btns.lines li:hover {
+    background-color: #d8d8d8;
+}
+
+.tabs .card-btns.lines li label {
+    display: grid;
+    width: 100%;
+    height: 3px;
+    font-size: 0;
+    padding: 0;
+}
+
+/* back/forward buttons */
+.card-nav {
+    position: var(--position--card-nav--hero--slideshow);
+    bottom: var(--bottom--card-nav--hero--slideshow);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: var(--width--card-nav--hero--slideshow);
+    opacity: var(--opacity--card-btns--slideshow);
+    transition: opacity .3s ease-in-out;
+}
+
+.card-nav button {
+    display: grid;
+    place-content: center;
+    height: 100px;
+    background-color: #342b64;
+    border: none;
+    border-radius: 0;
+    transition: background-color .3s ease-in-out;
+}
+
+.card-nav button:hover {
+    background-color: #fac233b1;
+}
+
+.card-nav button svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--wp--preset--color--base);
+    transition: width .3s ease-in-out, height .3s ease-in-out;
+}
+
+.card-nav button:hover svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* =====================================================
+   Animations
+====================================================== */
+@keyframes img--hero--slideshow {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes title--hero--slideshow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes title--hero--slideshow--backdrop {
+    0% {
+        left: 0;
+        right: auto;
+        width: 0;
+    }
+    50% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+    51% {
+        left: auto;
+        right: 0;
+    }
+    100% {
+        left: auto;
+        right: 0;
+        width: 0;
+    }
+}

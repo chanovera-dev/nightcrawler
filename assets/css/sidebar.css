@@ -1,0 +1,57 @@
+.site-main .block main.content aside.wp-sidebar > *:not(:last-child) {
+    margin-bottom:30px;
+}
+
+aside.wp-sidebar .wp-block-group {
+    padding: 0;
+}
+
+aside.wp-sidebar .wp-block-group .wp-block-heading {
+    font-size: 20;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+}
+
+aside.wp-sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+aside.wp-sidebar ul li a {
+    display: inline-block;
+    padding: 5px 0;
+    transition: color .3s ease-in-out;
+}
+
+aside.wp-sidebar ul li a:hover {
+    color: #fac233;
+}
+
+aside.wp-sidebar ul li.menu-item-home {
+    display: none;
+}
+
+aside.wp-sidebar ul li .wp-block-navigation__submenu-container {
+    padding-left: 20px;
+}
+
+aside.wp-sidebar ul li .wp-block-navigation__submenu-container li a {
+    font-size: 13px;;
+}
+
+@media(min-width:1024px) {
+
+    .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        max-width: 100%;
+    }
+
+    .site-main .block main.content {
+        grid-template-columns: 1fr 312px;
+        gap: 0 50px;
+    }
+    
+}
