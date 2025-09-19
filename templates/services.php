@@ -73,6 +73,7 @@ get_header(); ?>
             </div>
         </div>
     </section>
+    <!--
     <?php if (have_rows('solutions_repeater')) : ?>
     <section class="block">
         <div class="content">
@@ -122,6 +123,7 @@ get_header(); ?>
         </div>
     </section>
     <?php endif; ?>
+    -->
     <section id="testimonials" class="block">
         <?php if ( $picture = get_field('testimonials_background') ) : ?>
             <?php 

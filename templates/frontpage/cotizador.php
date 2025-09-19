@@ -29,10 +29,12 @@
                 <label for="tipo-de-producto">Tipo de Producto</label>
                 <select id="tipo-de-producto" name="tipo-de-producto" required>
                     <option value="">Selecciona una opción</option>
-                    <option value="medicamento">Medicamento</option>
-                    <option value="alimento">Alimentos Envasados</option>
-                    <option value="liquidos">Líquidos</option>
-                    <option value="quimicos">Químicos</option>
+                    <option value="Medicamento">Medicamento</option>
+                    <option value="Alimentos">Alimentos</option>
+                    <option value="Líquidos">Líquidos</option>
+                    <option value="Químicos">Químicos</option>
+                    <option value="Servicio mixto">Servicio mixto</option>
+                    <option value="Documentos">Documentos</option>
                 </select>
             </div>
 

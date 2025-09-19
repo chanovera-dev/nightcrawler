@@ -92,7 +92,7 @@ function post_templates() {
         wp_enqueue_style( 'single-post', get_template_directory_uri() . '/assets/css/single.css', [], get_asset_version('/assets/css/single.css') );
         if ( has_post_thumbnail() == true ) {
             wp_enqueue_style( 'single-post-thumbnail', get_template_directory_uri() . '/assets/css/single/thumbnail.css', [], get_asset_version('/assets/css/single/thumbnail.css') );
-            wp_enqueue_script( 'parallax-rastreo', get_template_directory_uri() . '/assets/js/frontpage/rastreo/parallax-rastreo.js', [], get_asset_version('/assets/js/frontpage/rastreo/parallax-rastreo.js'), true );
+            wp_enqueue_script( 'parallax-rastreo', get_template_directory_uri() . '/assets/js/parallax-hero.js', [], get_asset_version('/assets/js/parallax-hero.js'), true );
         }
     }
 

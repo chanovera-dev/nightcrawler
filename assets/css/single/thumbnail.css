@@ -1,0 +1,23 @@
+.site-main .block {
+    position: relative;
+    overflow: hidden;
+}
+
+.site-main .block .thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.site-main header.block .content {
+    color: var(--wp--preset--color--base);
+    position: relative;
+}
+
+.site-main header.block .content .date.category:after {
+    background-color: var(--wp--preset--color--base);
+}

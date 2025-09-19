@@ -59,6 +59,10 @@
     #services .slideshow-buttons-wrapper {
         display: none;
     }
+
+    #services.block .content {
+        width: 100% !important;
+    }
 }
 
 @media (min-width: 768px) {

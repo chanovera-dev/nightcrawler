@@ -57,7 +57,7 @@ get_header(); ?>
                             </div>
                         <?php endwhile; ?>
                     <?php else : ?>
-                        <p><?php esc_html_e( 'No se encontraron emails', 'yabaaexpress' ); ?></p>
+                        <p><?php esc_html_e( '', 'yabaaexpress' ); ?></p>
                     <?php endif; ?>
                 </div>
             </div>

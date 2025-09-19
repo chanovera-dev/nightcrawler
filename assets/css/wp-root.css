@@ -42,8 +42,11 @@
     /* frontpage posts */
     --font-size--title-section--posts-frontpage: 18px;
     --font-size--title--slideshow--posts: 26px;
+    --padding-posts: 20px 1fr;
 
     /* footer */
+    
+    --gap--top-footer: 20px;
     --justify-content--bottom-footer: center;
 
     /* services page */
@@ -86,6 +89,7 @@
         --font-size--title--slideshow--posts: 36px;
 
         /* footer */
+        --gap--top-footer: 40px;
         --justify-content--bottom-footer: space-between;
     }
 }

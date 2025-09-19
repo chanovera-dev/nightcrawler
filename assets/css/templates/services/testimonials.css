@@ -16,7 +16,7 @@
 
 #testimonials .container.content.large-width {
     overflow: hidden;
-    width: min(100%, 1440px);
+    width: min(100%, 1440px) !important;
     position: relative;
 }
 

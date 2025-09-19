@@ -38,7 +38,7 @@ html #wpadminbar {
 @media (width <= 1365px) {
     body:has(#wpadminbar) {
         header#header.block {
-            position: relative;
+
             & .content {
                 & .support-navigation__wrapper {
                     height: calc(100svh - var(--margin-top-4-wpadminbar));
